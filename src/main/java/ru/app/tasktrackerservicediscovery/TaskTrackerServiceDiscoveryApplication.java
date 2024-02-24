@@ -11,6 +11,5 @@ public class TaskTrackerServiceDiscoveryApplication {
     public static void main(String[] args) {
         SpringApplication.run(TaskTrackerServiceDiscoveryApplication.class, args);
     }
-    //geteway mb
 
 }
