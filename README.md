@@ -1,6 +1,4 @@
-docker-compose -f docker-compose-ide.yml build
-docker-compose -f docker-compose-ide.yml up
-http://localhost:8761/
+
 
 # Task Tracker Service Discovery
 
