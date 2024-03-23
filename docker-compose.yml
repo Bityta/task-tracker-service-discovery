@@ -1,0 +1,47 @@
+version: "3.1"
+services:
+  postgres:
+    container_name: "postgres"
+    image: postgres:14.7-alpine
+    networks:
+      - task-tracker-network
+    restart: always
+    environment:
+      POSTGRES_USER:
+      POSTGRES_PASSWORD:
+      POSTGRES_DB: task-tracker-backend
+    volumes:
+      - ./postgres:/var/lib/postgres
+    ports:
+      - "15432:5432"
+
+  rabbitmq:
+    container_name: "rabbitmq"
+    image: 'rabbitmq:3-management-alpine'
+    networks:
+      - task-tracker-network
+    restart: always
+    environment:
+      RABBITMQ_PASSWORD:
+      RABBITMQ_USERNAME:
+    volumes:
+      - ./rabbitmq:/var/lib/rabbitMQ
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+  task-tracker-service-discovery:
+    container_name: "task-tracker-service-discovery"
+    image: task-tracker-service-discovery:0.0.1
+    networks:
+      - task-tracker-network
+    build:
+      context: ../task-tracker-service-discovery/
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "8761:8761"
+
+networks:
+  task-tracker-network:
+    driver: bridge
