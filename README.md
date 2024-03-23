@@ -40,7 +40,7 @@ There you can monitor the operation of microservices.
 
 ### Settings
 
-Go to docker-compose.yml. And set the parameters for PostgreSQL and RabbitMQ.
+Go to `docker-compose.yml` . And set the parameters for PostgreSQL and RabbitMQ.
 
 ```yml
 services:
