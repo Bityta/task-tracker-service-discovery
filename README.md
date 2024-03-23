@@ -2,6 +2,8 @@
 
 # Task Tracker Service Discovery
 
+## Overview
+
 The Microservice Discovery Server, powered by Eureka, serves as the central hub for managing and coordinating all
 microservices within the application ecosystem. It facilitates service registration, discovery, and monitoring, enabling
 seamless communication and interaction among microservices.
