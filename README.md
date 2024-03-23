@@ -8,6 +8,9 @@ The Microservice Discovery Server, powered by Eureka, serves as the central hub 
 microservices within the application ecosystem. It facilitates service registration, discovery, and monitoring, enabling
 seamless communication and interaction among microservices.
 
+
+Additional project details can be found in the Task Tracker Info.  Please refer to it [here](https://github.com/Bityta/task-tracker-info).
+
 ## Features
 
 - Service Registration and Discovery: Microservices register themselves with the Eureka server upon startup, allowing
